@@ -6,3 +6,4 @@
 <?php include_once('dice-4.png') ?>
 <?php include_once('dice-5.png') ?>
 <?php include_once('dice-6.png') ?>
+<?php include_once('mountain.jpg') ?>

@@ -59,12 +59,8 @@ body {
 }
 
 form {
-    margin-left: 50% auto;
-    margin-right: 50% auto;
-}
-
-body > div > img {
-    image
+    margin-right: 50%;
+    width: 100%;
 }
 
 /**********************************************

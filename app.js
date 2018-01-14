@@ -39,8 +39,6 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
                 roundScores = 0;
                 document.querySelector('#score-'+activePlayer).textContent = roundScores;
                 document.querySelector('.dice2').src = 'dice-6.png';
-                document.getElementById('twoSixes').style.display = 'block';
-                document.getElementById('twoSixes').textContent = 'Player' + (activePlayer + 1)+', sorry, but you just rolled two sixes. When you roll two sixes you lose all your points and your turn. However, if the next player rolls a six then you will get your turn back, but not your points.';
                 nextPlayer();
             }
         } else {
@@ -109,7 +107,6 @@ gamePlaying = true;
     document.getElementById('current-1').textContent = '0';
     document.getElementById('name-0').textContent = 'Player 1';
     document.getElementById('name-1').textContent = 'Player 2';
-    document.getElementById('twoSixes').style.display = 'none';
 
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.dice2').style.display = 'none';

@@ -7,9 +7,9 @@ roll2 = [];
 document.querySelector('.btn-roll').addEventListener('click', function() {
     
     if (gamePlaying){
-        //1. random number
+        //1. Random Number
         var dice = Math.round(Math.random() * 5 + 1);
-//        var dice2 = Math.round(Math.random() * 5 + 1);
+        var dice2 = Math.round(Math.random() * 5 + 1);
         dice2 = 6;
         
         rolls.push(dice);
@@ -36,7 +36,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             if ((dice === 6) && (dice2 === 6)) {
                 console.log(rolls.slice(-10));
                 console.log(roll2.slice(-10));
-                document.querySelector('#score-'+activePlayer).textContent = 0;
+                roundScores = 0;
+                document.querySelector('#score-'+activePlayer).textContent = roundScores;
                 document.querySelector('.dice2').src = 'dice-6.png';
                 document.getElementById('twoSixes').style.display = 'block';
                 document.getElementById('twoSixes').textContent = 'Player' + (activePlayer + 1)+', sorry, but you just rolled two sixes. When you roll two sixes you lose all your points and your turn. However, if the next player rolls a six then you will get your turn back, but not your points.';
@@ -49,7 +50,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
     }
 }); 
 
- document.querySelector('body > div > button.btn-hold').addEventListener('click', function(){
+ document.querySelector('.btn-hold').addEventListener('click', function(){
     if (gamePlaying){
             //Add current score to global score
      scores[activePlayer] += roundScores;
@@ -94,7 +95,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 //     document.querySelector('.dice2').style.display = 'none';
  }  
 
- document.querySelector('body > div > button.btn-new').addEventListener('click', init);
+ document.querySelector('.btn-new').addEventListener('click', init);
 
 function init() {
 scores = [0,0];

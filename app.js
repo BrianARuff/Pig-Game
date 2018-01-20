@@ -1,4 +1,4 @@
-var scores, scores2, roundScores, activePlayer, gamePlaying, rolls, twoSixes, roll2, twoSixes2;
+var scores, roundScores, activePlayer, gamePlaying, rolls, twoSixes, roll2, twoSixes2;
 
 init();
 rolls = [];
@@ -37,6 +37,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
                 console.log(rolls.slice(-10));
                 console.log(roll2.slice(-10));
                 roundScores = 0;
+                console.log(scores);
+                scores[activePlayer] = 0;
                 document.querySelector('#score-'+activePlayer).textContent = roundScores;
                 document.querySelector('.dice2').src = 'dice-6.png';
                 nextPlayer();

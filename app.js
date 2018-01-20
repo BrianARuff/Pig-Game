@@ -37,8 +37,8 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
                 console.log(rolls.slice(-10));
                 console.log(roll2.slice(-10));
                 roundScores = 0;
-                console.log(scores);
                 scores[activePlayer] = 0;
+                console.log('Player ' + (activePlayer+1) + ' score was set to ' + scores[activePlayer] + ' because they rolled double sixes.')
                 document.querySelector('#score-'+activePlayer).textContent = roundScores;
                 document.querySelector('.dice2').src = 'dice-6.png';
                 nextPlayer();
